@@ -1,6 +1,8 @@
 package net.miguelx46.codemod;
 
 import com.mojang.logging.LogUtils;
+import net.miguelx46.codemod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -22,11 +24,9 @@ public class CodeMod {
     private static final Logger LOGGER = LogUtils.getLogger();
     public CodeMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        // Register the commonSetup method for modloading
+        ModItems.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
-        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-        // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
     }
 
@@ -34,9 +34,11 @@ public class CodeMod {
 
     }
 
-    // Add the example block item to the building blocks tab
+    // añade los items del mod a la lista de items vailla del creativo
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+              event.accept(ModItems.JAVA_COFFEE);
+         }
     }
 
     @SubscribeEvent
