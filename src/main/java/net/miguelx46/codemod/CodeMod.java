@@ -1,6 +1,7 @@
 package net.miguelx46.codemod;
 
 import com.mojang.logging.LogUtils;
+import net.miguelx46.codemod.item.ModCreativeModTabs;
 import net.miguelx46.codemod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -18,13 +19,14 @@ import org.slf4j.Logger;
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(CodeMod.MOD_ID)
 public class CodeMod {
-    // Define mod id in a common place for everything to reference
+
     public static final String MOD_ID = "codemod";
-    // Directly reference a slf4j logger
+
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public CodeMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        ModCreativeModTabs.register(modEventBus); //llamada al metodo register y se le pasa un bus de eventos
         ModItems.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
