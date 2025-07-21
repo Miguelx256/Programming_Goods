@@ -35,10 +35,12 @@ public class CodeMod {
 
     }
 
-    // añade los items del mod a la lista de items vailla del creativo
+    // añade los items del mod a la lista de items vanilla del creativo
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        // se añaden al tab ingredientes
          if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
               event.accept(ModItems.JAVA_COFFEE);
+              event.accept(ModItems.JAVA_JUICE);
          }
     }
 
