@@ -1,6 +1,7 @@
 package net.miguelx46.codemod;
 
 import com.mojang.logging.LogUtils;
+import net.miguelx46.codemod.block.ModBlocks;
 import net.miguelx46.codemod.item.ModCreativeModTabs;
 import net.miguelx46.codemod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -28,6 +29,7 @@ public class CodeMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModCreativeModTabs.register(modEventBus); //llamada al metodo register y se le pasa un bus de eventos
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);

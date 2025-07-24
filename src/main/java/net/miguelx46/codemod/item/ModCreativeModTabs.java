@@ -1,6 +1,7 @@
 package net.miguelx46.codemod.item;
 
 import net.miguelx46.codemod.CodeMod;
+import net.miguelx46.codemod.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -20,6 +21,7 @@ public class ModCreativeModTabs {
                     .displayItems((pParameters, pOutput) -> { // aqui se van poniendo los items del mod
                         pOutput.accept(ModItems.JAVA_COFFEE.get());
                         pOutput.accept(ModItems.JAVA_JUICE.get());
+                        pOutput.accept(ModBlocks.JAVA_OBJECT_ORE.get());
 
                     })
                     .build());

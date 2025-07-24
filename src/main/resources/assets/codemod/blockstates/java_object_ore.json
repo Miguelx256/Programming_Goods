@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "codemod:block/java_object_ore"
+    }
+  }
+}
