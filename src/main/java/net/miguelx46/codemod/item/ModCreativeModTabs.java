@@ -21,8 +21,9 @@ public class ModCreativeModTabs {
                     .displayItems((pParameters, pOutput) -> { // aqui se van poniendo los items del mod
                         pOutput.accept(ModItems.JAVA_COFFEE.get());
                         pOutput.accept(ModItems.JAVA_JUICE.get());
+                        pOutput.accept(ModItems.JAVA_OBJECT.get());
                         pOutput.accept(ModBlocks.JAVA_OBJECT_ORE.get());
-
+                        pOutput.accept(ModBlocks.JAVA_COFFEE_BLOCK.get());
                     })
                     .build());
 

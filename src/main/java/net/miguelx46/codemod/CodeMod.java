@@ -45,6 +45,7 @@ public class CodeMod {
          if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
               event.accept(ModItems.JAVA_COFFEE);
               event.accept(ModItems.JAVA_JUICE);
+              event.accept(ModItems.JAVA_OBJECT);
          }
     }
 

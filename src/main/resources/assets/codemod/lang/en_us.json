@@ -2,6 +2,7 @@
   "item.codemod.java_coffee": "Java Coffee",
   "item.codemod.java_juice": "Java Juice",
   "block.codemod.java_object_ore": "Java Object Ore",
-
+  "block.codemod.java_coffee_block": "Java Coffee Block",
+  "item.codemod.java_object": "Java Object",
   "creativetab.codemod_tab": "Code Mod"
 }

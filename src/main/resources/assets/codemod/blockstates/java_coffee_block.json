@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "codemod:block/java_coffee_block"
+    }
+  }
+}
