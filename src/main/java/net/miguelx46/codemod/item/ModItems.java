@@ -15,6 +15,10 @@ public class ModItems {
     public static final RegistryObject<Item> JAVA_COFFEE = ITEMS.register("java_coffee", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> JAVA_JUICE = ITEMS.register("java_juice", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> JAVA_OBJECT = ITEMS.register("java_object", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> JAVA_HELMET = ITEMS.register("java_helmet", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> JAVA_CHESTPLATE = ITEMS.register("java_chestplate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> JAVA_LEGGINGS = ITEMS.register("java_leggings", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> JAVA_BOOTS = ITEMS.register("java_boots", () -> new Item(new Item.Properties()));
 
     // registrar los items dado un bus de eventos
     public static void register(IEventBus eventBus) {

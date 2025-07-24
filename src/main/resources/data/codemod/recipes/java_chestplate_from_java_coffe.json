@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "# #",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "codemod:java_coffee"
+    }
+  },
+  "result": {
+    "item": "codemod:java_chestplate"
+  }
+}

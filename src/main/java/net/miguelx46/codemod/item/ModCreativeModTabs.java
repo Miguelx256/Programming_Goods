@@ -22,6 +22,11 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.JAVA_COFFEE.get());
                         pOutput.accept(ModItems.JAVA_JUICE.get());
                         pOutput.accept(ModItems.JAVA_OBJECT.get());
+                        pOutput.accept(ModItems.JAVA_HELMET.get());
+                        pOutput.accept(ModItems.JAVA_CHESTPLATE.get());
+                        pOutput.accept(ModItems.JAVA_LEGGINGS.get());
+                        pOutput.accept(ModItems.JAVA_BOOTS.get());
+
                         pOutput.accept(ModBlocks.JAVA_OBJECT_ORE.get());
                         pOutput.accept(ModBlocks.JAVA_COFFEE_BLOCK.get());
                     })
