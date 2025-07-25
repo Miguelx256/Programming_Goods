@@ -19,13 +19,16 @@ public class ModBlocks {
     // lista de bloques para ser registrados
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, CodeMod.MOD_ID);
 
-    // registro de bloques con las propiedades y sonidos de un bloque en especifico
+    // registro de bloques con las propiedades y sonido de un bloque en especifico
     public static final RegistryObject<Block> JAVA_OBJECT_ORE = registerBlock("java_object_ore",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE).sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> JAVA_COFFEE_BLOCK = registerBlock("java_coffee_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.METAL)));
 
+    // arreglar
+    //public static final RegistryObject<Block> CODE_FURNACE = registerBlock("code_furnace",
+           //() -> new Block(BlockBehaviour.Properties.copy(Blocks.FURNACE)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

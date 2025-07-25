@@ -10,5 +10,6 @@
   "item.codemod.java_boots": "Java Boots",
 
   "block.codemod.java_object_ore": "Java Object Ore",
-  "block.codemod.java_coffee_block": "Java Coffee Block"
+  "block.codemod.java_coffee_block": "Java Coffee Block",
+  "block.codemod.code_furnace": "Code Furnace"
 }

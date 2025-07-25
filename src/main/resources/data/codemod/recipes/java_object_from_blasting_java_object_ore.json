@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 140,
+  "experience": 2,
+  "group": "java_object",
+  "ingredient": {
+    "item": "codemod:java_object_ore"
+  },
+  "result": "codemod:java_object"
+}

@@ -29,6 +29,7 @@ public class ModCreativeModTabs {
 
                         pOutput.accept(ModBlocks.JAVA_OBJECT_ORE.get());
                         pOutput.accept(ModBlocks.JAVA_COFFEE_BLOCK.get());
+                        //pOutput.accept(ModBlocks.CODE_FURNACE.get()); arreglar
                     })
                     .build());
 
