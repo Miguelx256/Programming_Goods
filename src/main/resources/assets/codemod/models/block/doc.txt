@@ -1,0 +1,1 @@
+esta carpeta van los json de los bloques para tener su textura

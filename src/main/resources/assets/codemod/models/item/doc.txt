@@ -1,0 +1,1 @@
+esta carpeta van los json de los items para tener su textura

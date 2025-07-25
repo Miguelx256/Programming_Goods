@@ -1,0 +1,1 @@
+los json de las herramientas que pueden picar el bloque, pero no necesariamente obtenerlo
