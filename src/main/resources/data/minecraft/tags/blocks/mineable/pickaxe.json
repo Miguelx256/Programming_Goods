@@ -1,7 +1,7 @@
 {
   "values": [
     "codemod:java_object_ore",
-    "codemod:java_coffee_block",
-    "codemod:code_furnace"
+    "codemod:java_coffee_block"
+
   ]
 }

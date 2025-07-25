@@ -1,6 +1,7 @@
 package net.miguelx46.codemod.block;
 
 import net.miguelx46.codemod.CodeMod;
+import net.miguelx46.codemod.block.custom.CodeFurnace;
 import net.miguelx46.codemod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -26,9 +27,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> JAVA_COFFEE_BLOCK = registerBlock("java_coffee_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.METAL)));
 
-    // arreglar
-    //public static final RegistryObject<Block> CODE_FURNACE = registerBlock("code_furnace",
-           //() -> new Block(BlockBehaviour.Properties.copy(Blocks.FURNACE)));
+    public static final RegistryObject<Block> CODE_FURNACE = registerBlock("code_furnace",
+           () -> new CodeFurnace(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
