@@ -1,1 +1,2 @@
 los json de bloques que requieran un tipo de herramientas para ser obtenidos
+nota: los rangos mas altos que el rango especificado podran picar el bloque
