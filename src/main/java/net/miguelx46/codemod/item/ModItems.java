@@ -19,6 +19,7 @@ public class ModItems {
     public static final RegistryObject<Item> JAVA_CHESTPLATE = ITEMS.register("java_chestplate", () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> JAVA_LEGGINGS = ITEMS.register("java_leggings", () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> JAVA_BOOTS = ITEMS.register("java_boots", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> JAVA_APPLE = ITEMS.register("java_apple", () -> new Item(new Item.Properties().food(ModFoods.JAVA_APPLE).stacksTo(64)));
 
     // registrar los items dado un bus de eventos
     public static void register(IEventBus eventBus) {

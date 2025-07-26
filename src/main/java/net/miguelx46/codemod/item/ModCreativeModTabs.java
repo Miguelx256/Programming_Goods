@@ -18,14 +18,18 @@ public class ModCreativeModTabs {
     public static final RegistryObject<CreativeModeTab> CODEMOD_TAB = CREATIVE_MODE_TAB.register("codemod_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.JAVA_COFFEE.get()))
                     .title(Component.translatable("creativetab.codemod_tab"))
-                    .displayItems((pParameters, pOutput) -> { // aqui se van poniendo los items del mod
+                    .displayItems((pParameters, pOutput) -> {
+                        // aqui se van poniendo los items del mod, el orden de muestreo
+                        // depende del orden de ejecucion dentro de este atributo
                         pOutput.accept(ModItems.JAVA_COFFEE.get());
-                        pOutput.accept(ModItems.JAVA_JUICE.get());
                         pOutput.accept(ModItems.JAVA_OBJECT.get());
                         pOutput.accept(ModItems.JAVA_HELMET.get());
                         pOutput.accept(ModItems.JAVA_CHESTPLATE.get());
                         pOutput.accept(ModItems.JAVA_LEGGINGS.get());
                         pOutput.accept(ModItems.JAVA_BOOTS.get());
+
+                        pOutput.accept(ModItems.JAVA_JUICE.get());
+                        pOutput.accept(ModItems.JAVA_APPLE.get());
 
                         pOutput.accept(ModBlocks.JAVA_OBJECT_ORE.get());
                         pOutput.accept(ModBlocks.JAVA_COFFEE_BLOCK.get());
