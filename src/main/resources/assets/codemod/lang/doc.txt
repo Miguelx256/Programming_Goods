@@ -1,1 +1,1 @@
-esta carpeta van los json de los bloques para tener su textura
+aqui se muestran los nombres de los items que se veran dentro del juego
