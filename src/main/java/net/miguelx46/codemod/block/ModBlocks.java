@@ -2,9 +2,11 @@ package net.miguelx46.codemod.block;
 
 import net.miguelx46.codemod.CodeMod;
 import net.miguelx46.codemod.block.custom.CodeFurnace;
+import net.miguelx46.codemod.block.custom.FuelBlock;
 import net.miguelx46.codemod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
@@ -14,6 +16,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.Properties;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -27,8 +30,17 @@ public class ModBlocks {
     public static final RegistryObject<Block> JAVA_COFFEE_BLOCK = registerBlock("java_coffee_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.METAL)));
 
-    public static final RegistryObject<Block> CODE_FURNACE = registerBlock("code_furnace",
-           () -> new CodeFurnace(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+    //public static final RegistryObject<Block> CODE_FURNACE = registerBlock("code_furnace",
+           //() -> new CodeFurnace(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    // tienen que ir 2 registry para un bloque que sea combustible, uno para registrarlo como bloque y otro para item en ese orden
+    public static final RegistryObject<Block> ARRAY_FUEL_BLOCK = BLOCKS.register("array_fuel_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK)));
+
+    public static final RegistryObject<Item> ARRAY_FUEL_BLOCK_ITEM = ModItems.ITEMS.register("array_fuel_block",
+            () -> new FuelBlock(ARRAY_FUEL_BLOCK.get(), new Item.Properties(), 5500));
+
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

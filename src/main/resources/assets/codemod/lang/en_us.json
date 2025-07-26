@@ -9,8 +9,10 @@
   "item.codemod.java_chestplate": "Java Chestplate",
   "item.codemod.java_leggings": "Java Leggings",
   "item.codemod.java_boots": "Java Boots",
+  "item.codemod.array_fuel": "Array Fuel",
 
   "block.codemod.java_object_ore": "Java Object Ore",
   "block.codemod.java_coffee_block": "Java Coffee Block",
+  "block.codemod.array_fuel_block": "Array Fuel Block",
   "block.codemod.code_furnace": "Code Furnace"
 }

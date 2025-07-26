@@ -1,6 +1,9 @@
 package net.miguelx46.codemod.item;
 
 import net.miguelx46.codemod.CodeMod;
+import net.miguelx46.codemod.block.ModBlocks;
+import net.miguelx46.codemod.block.custom.FuelBlock;
+import net.miguelx46.codemod.block.custom.FuelItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -20,6 +23,8 @@ public class ModItems {
     public static final RegistryObject<Item> JAVA_LEGGINGS = ITEMS.register("java_leggings", () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> JAVA_BOOTS = ITEMS.register("java_boots", () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> JAVA_APPLE = ITEMS.register("java_apple", () -> new Item(new Item.Properties().food(ModFoods.JAVA_APPLE).stacksTo(64)));
+    public static final RegistryObject<Item> ARRAY_FUEL = ITEMS.register("array_fuel", () -> new FuelItem(new Item.Properties().stacksTo(64), 2500));
+
 
     // registrar los items dado un bus de eventos
     public static void register(IEventBus eventBus) {
