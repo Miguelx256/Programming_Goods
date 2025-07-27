@@ -1,0 +1,1 @@
+clases para automatizar la generación de .json
