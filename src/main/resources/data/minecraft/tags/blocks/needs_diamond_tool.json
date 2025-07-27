@@ -1,6 +1,6 @@
 {
   "values": [
-    "codemod:java_object_ore",
-    "codemod:java_coffee_block"
+    "programminggoods:java_object_ore",
+    "programminggoods:java_coffee_block"
   ]
 }

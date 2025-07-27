@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "programminggoods:java_coffee_block"
+    }
+  ],
+  "result": {
+    "item": "programminggoods:java_coffee",
+    "count": 9
+  }
+}

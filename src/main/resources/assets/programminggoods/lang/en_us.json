@@ -1,0 +1,18 @@
+{
+  "creativetab.programminggoods_tab": "Programming Goods",
+
+  "item.programminggoods.java_coffee": "Java Coffee",
+  "item.programminggoods.java_juice": "Java Juice",
+  "item.programminggoods.java_apple": "Java Apple",
+  "item.programminggoods.java_object": "Java Object",
+  "item.programminggoods.java_helmet": "Java Helmet",
+  "item.programminggoods.java_chestplate": "Java Chestplate",
+  "item.programminggoods.java_leggings": "Java Leggings",
+  "item.programminggoods.java_boots": "Java Boots",
+  "item.programminggoods.array_fuel": "Array Fuel",
+
+  "block.programminggoods.java_object_ore": "Java Object Ore",
+  "block.programminggoods.java_coffee_block": "Java Coffee Block",
+  "block.programminggoods.array_fuel_block": "Array Fuel Block",
+  "block.programminggoods.code_furnace": "Code Furnace"
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " # ",
+    "#@#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "programminggoods:java_coffee"
+    },
+    "@": {
+      "item": "minecraft:coal"
+    }
+  },
+  "result": {
+    "item": "programminggoods:array_fuel",
+    "count": 2
+  }
+}

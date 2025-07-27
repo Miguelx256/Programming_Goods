@@ -1,7 +1,0 @@
-{
-  "variants": {
-    "": {
-      "model": "codemod:block/array_fuel_block"
-    }
-  }
-}

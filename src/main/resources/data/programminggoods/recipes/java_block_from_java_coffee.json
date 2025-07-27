@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "programminggoods:java_coffee"
+    }
+  },
+  "result": {
+    "item": "programminggoods:java_coffee_block"
+  }
+}
