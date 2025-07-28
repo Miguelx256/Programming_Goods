@@ -2,8 +2,7 @@ package net.miguelx46.programminggoods.item;
 
 import net.miguelx46.programminggoods.ProgrammingGoods;
 import net.miguelx46.programminggoods.block.custom.FuelItem;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -32,6 +31,20 @@ public class ModItems {
 
     public static final RegistryObject<Item> ARRAY_FUEL = ITEMS.register("array_fuel", () -> new FuelItem(new Item.Properties().stacksTo(64), 2500));
 
+    public static final RegistryObject<Item> JAVA_SWORD = ITEMS.register("java_sword",
+            () -> new SwordItem(ModToolTiers.JAVA, 9, 3, new Item.Properties().stacksTo(1).durability(3000)));
+
+    public static final RegistryObject<Item> JAVA_PICKAXE = ITEMS.register("java_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.JAVA, 1, 1, new Item.Properties().stacksTo(1).durability(3000)));
+
+    public static final RegistryObject<Item> JAVA_AXE = ITEMS.register("java_axe",
+            () -> new AxeItem(ModToolTiers.JAVA, 7, 1, new Item.Properties().stacksTo(1).durability(3000)));
+
+    public static final RegistryObject<Item> JAVA_SHOVEL = ITEMS.register("java_shovel",
+            () -> new ShovelItem(ModToolTiers.JAVA, 0, 0, new Item.Properties().stacksTo(1).durability(3000)));
+
+    public static final RegistryObject<Item> JAVA_HOE = ITEMS.register("java_hoe",
+            () -> new HoeItem(ModToolTiers.JAVA, 0, 0, new Item.Properties().stacksTo(1).durability(3000)));
 
     // registrar los items dado un bus de eventos
     public static void register(IEventBus eventBus) {

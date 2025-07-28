@@ -37,6 +37,12 @@ public class ModCreativeModTabs {
 
                         pOutput.accept((ModItems.ARRAY_FUEL.get()));
                         pOutput.accept((ModBlocks.ARRAY_FUEL_BLOCK.get()));
+
+                        pOutput.accept((ModItems.JAVA_SWORD.get()));
+                        pOutput.accept((ModItems.JAVA_PICKAXE.get()));
+                        pOutput.accept((ModItems.JAVA_AXE.get()));
+                        pOutput.accept((ModItems.JAVA_SHOVEL.get()));
+                        pOutput.accept((ModItems.JAVA_HOE.get()));
                     })
                     .build());
 

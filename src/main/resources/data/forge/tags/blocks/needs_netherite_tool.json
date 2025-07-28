@@ -1,5 +1,7 @@
 {
   "values": [
-
+    "programminggoods:java_object_ore",
+    "programminggoods:java_coffee_block",
+    "programminggoods:array_fuel_block"
   ]
 }
