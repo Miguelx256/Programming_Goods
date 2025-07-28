@@ -2,3 +2,6 @@ Mod de Minecraft en java con tematica de programación <img width="16" height="1
 
 
 <img width="400" height="400" alt="codemod_logo" src="https://github.com/user-attachments/assets/66782389-bbcc-4aa8-b84c-3913b111135e" />
+
+
+Link al proyecto en curseforge: https://www.curseforge.com/minecraft/mc-mods/codemod
