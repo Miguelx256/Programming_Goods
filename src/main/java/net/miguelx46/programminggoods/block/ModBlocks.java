@@ -27,17 +27,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> JAVA_COFFEE_BLOCK = registerBlock("java_coffee_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.METAL)));
 
-    //public static final RegistryObject<Block> CODE_FURNACE = registerBlock("code_furnace",
-           //() -> new CodeFurnace(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
-
-    // tienen que ir 2 registry para un bloque que sea combustible, uno para registrarlo como bloque y otro para item en ese orden
+    // tienen que ir 2 registry para un bloque que sea combustible, uno para registrarlo como bloque y otro para item, en ese orden
     public static final RegistryObject<Block> ARRAY_FUEL_BLOCK = BLOCKS.register("array_fuel_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK)));
 
     public static final RegistryObject<Item> ARRAY_FUEL_BLOCK_ITEM = ModItems.ITEMS.register("array_fuel_block",
             () -> new FuelBlock(ARRAY_FUEL_BLOCK.get(), new Item.Properties(), 5500));
-
-
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
