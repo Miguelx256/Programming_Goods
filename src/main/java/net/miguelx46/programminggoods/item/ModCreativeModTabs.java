@@ -33,7 +33,6 @@ public class ModCreativeModTabs {
 
                         pOutput.accept(ModBlocks.JAVA_OBJECT_ORE.get());
                         pOutput.accept(ModBlocks.JAVA_COFFEE_BLOCK.get());
-                        //pOutput.accept(ModBlocks.CODE_FURNACE.get());
 
                         pOutput.accept((ModItems.ARRAY_FUEL.get()));
                         pOutput.accept((ModBlocks.ARRAY_FUEL_BLOCK.get()));
