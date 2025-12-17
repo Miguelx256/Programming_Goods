@@ -32,7 +32,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK)));
 
     public static final RegistryObject<Item> ARRAY_FUEL_BLOCK_ITEM = ModItems.ITEMS.register("array_fuel_block",
-            () -> new FuelBlock(ARRAY_FUEL_BLOCK.get(), new Item.Properties(), 5500));
+            () -> new FuelBlock(ARRAY_FUEL_BLOCK.get(), new Item.Properties(), 30000));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
