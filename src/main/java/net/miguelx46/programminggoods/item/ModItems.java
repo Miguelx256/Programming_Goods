@@ -46,6 +46,16 @@ public class ModItems {
     public static final RegistryObject<Item> JAVA_HOE = ITEMS.register("java_hoe",
             () -> new HoeItem(ModToolTiers.JAVA, 0, 0, new Item.Properties().stacksTo(1).durability(3000)));
 
+    public static final RegistryObject<Item> JAVA_NODE = ITEMS.register("java_node", () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> JAVA_ARRAYLIST = ITEMS.register("java_arrayList", () -> new Item(new Item.Properties().food(ModFoods.JAVA_ARRAYLIST).stacksTo(64)));
+
+    public static final RegistryObject<Item> JAVA_HASHMAP = ITEMS.register("java_hashMap", () -> new Item(new Item.Properties().food(ModFoods.JAVA_HASHMAP).stacksTo(64)));
+
+    public static final RegistryObject<Item> JAVA_STACK = ITEMS.register("java_stack", () -> new Item(new Item.Properties().food(ModFoods.JAVA_STACK).stacksTo(64)));
+
+    public static final RegistryObject<Item> JAVA_BINARYTREE = ITEMS.register("java_binaryTree", () -> new Item(new Item.Properties().food(ModFoods.JAVA_BINARYTREE).stacksTo(64)));
+
     // registrar los items dado un bus de eventos
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
