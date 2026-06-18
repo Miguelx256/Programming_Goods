@@ -44,6 +44,12 @@ public class ModCreativeModTabs {
                         pOutput.accept((ModItems.JAVA_HOE.get()));
 
                         pOutput.accept((ModItems.JAVA_NODE.get()));
+                        pOutput.accept((ModItems.JAVA_ARRAYLIST.get()));
+                        pOutput.accept((ModItems.JAVA_HASHMAP.get()));
+                        pOutput.accept((ModItems.JAVA_STACK.get()));
+                        pOutput.accept((ModItems.JAVA_BINARYTREE.get()));
+
+
                     })
                     .build());
 

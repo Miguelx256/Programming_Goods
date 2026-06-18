@@ -21,5 +21,9 @@
   "block.programminggoods.array_fuel_block": "Array Fuel Block",
   "block.programminggoods.code_furnace": "Code Furnace",
 
-  "item.programminggoods.java_node": "Java Node"
+  "item.programminggoods.java_node": "Java Node",
+  "item.programminggoods.java_arraylist": "Java ArrayList",
+  "item.programminggoods.java_hashmap": "Java HashMap",
+  "item.programminggoods.java_stack": "Java Stack",
+  "item.programminggoods.java_binarytree": "Java BinaryTree"
 }

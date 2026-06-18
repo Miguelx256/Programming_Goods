@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "@@@",
+    "###",
+    "@@@"
+  ],
+  "key": {
+    "#": {
+      "item": "programminggoods:java_node"
+    },
+    "@": {
+      "item": "minecraft:emerald"
+    }
+  },
+  "result": {
+    "item": "programminggoods:java_binarytree",
+    "count": 1
+  }
+}
