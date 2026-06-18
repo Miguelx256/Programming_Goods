@@ -19,5 +19,7 @@
   "block.programminggoods.java_object_ore": "Java Object Ore",
   "block.programminggoods.java_coffee_block": "Java Coffee Block",
   "block.programminggoods.array_fuel_block": "Array Fuel Block",
-  "block.programminggoods.code_furnace": "Code Furnace"
+  "block.programminggoods.code_furnace": "Code Furnace",
+
+  "item.programminggoods.java_node": "Java Node"
 }

@@ -42,6 +42,8 @@ public class ModCreativeModTabs {
                         pOutput.accept((ModItems.JAVA_AXE.get()));
                         pOutput.accept((ModItems.JAVA_SHOVEL.get()));
                         pOutput.accept((ModItems.JAVA_HOE.get()));
+
+                        pOutput.accept((ModItems.JAVA_NODE.get()));
                     })
                     .build());
 
