@@ -81,8 +81,69 @@ public class JavaCompilerMenu extends AbstractContainerMenu {
     }
 
     @Override
-    public ItemStack quickMoveStack(Player player, int slot) {
-        return ItemStack.EMPTY;
+    public ItemStack quickMoveStack(Player player, int index) {
+
+        Slot sourceSlot = this.slots.get(index);
+
+        if (!sourceSlot.hasItem()) {
+            return ItemStack.EMPTY;
+        }
+
+        ItemStack sourceStack = sourceSlot.getItem();
+        ItemStack copyOfSourceStack = sourceStack.copy();
+
+        // Slot de resultado
+        if (index == 9) {
+
+            if (!this.moveItemStackTo(
+                    sourceStack,
+                    10,
+                    46,
+                    true)) {
+
+                return ItemStack.EMPTY;
+            }
+
+            sourceSlot.onQuickCraft(
+                    sourceStack,
+                    copyOfSourceStack);
+        }
+
+        // Inventario del compilador
+        else if (index >= 0 && index <= 9) {
+
+            if (!this.moveItemStackTo(
+                    sourceStack,
+                    10,
+                    46,
+                    false)) {
+
+                return ItemStack.EMPTY;
+            }
+        }
+
+        // Inventario del jugador
+        else {
+
+            if (!this.moveItemStackTo(
+                    sourceStack,
+                    0,
+                    9,
+                    false)) {
+
+                return ItemStack.EMPTY;
+            }
+        }
+
+        if (sourceStack.isEmpty()) {
+            sourceSlot.set(ItemStack.EMPTY);
+        } else {
+            sourceSlot.setChanged();
+        }
+
+        sourceSlot.onTake(player, sourceStack);
+
+        return copyOfSourceStack;
     }
 
     @Override
