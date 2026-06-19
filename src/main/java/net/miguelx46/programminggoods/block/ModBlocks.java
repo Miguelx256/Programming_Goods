@@ -39,7 +39,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> JAVA_COMPILER_TABLE =
             registerBlock("java_compiler_table",
                     () -> new JavaCompilerTableBlock(
-                            BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)));
+                            BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                                    .requiresCorrectToolForDrops()
+                                    .strength(50.0f, 1200.0f)
+                    ));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

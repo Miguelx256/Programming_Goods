@@ -1,6 +1,11 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "programminggoods:block/java_compiler_table"
+    "down": "programminggoods:block/java_compiler_base",
+    "up": "programminggoods:block/java_compiler_top",
+    "north": "programminggoods:block/java_compiler_base",
+    "south": "programminggoods:block/java_compiler_base",
+    "east": "programminggoods:block/java_compiler_base",
+    "west": "programminggoods:block/java_compiler_base"
   }
 }

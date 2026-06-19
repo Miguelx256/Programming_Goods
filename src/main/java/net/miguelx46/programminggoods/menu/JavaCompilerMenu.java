@@ -17,7 +17,7 @@ public class JavaCompilerMenu extends AbstractContainerMenu {
                             Inventory playerInventory,
                             FriendlyByteBuf buffer) {
 
-        this(id, playerInventory, new ItemStackHandler(4));
+        this(id, playerInventory, new ItemStackHandler(10));
     }
 
     public JavaCompilerMenu(int id,
@@ -28,35 +28,30 @@ public class JavaCompilerMenu extends AbstractContainerMenu {
 
         this.inventory = inventory;
 
-        // INPUT 1
-        this.addSlot(new SlotItemHandler(
-                inventory,
-                0,
-                44,
-                35));
+        // CRAFTING 3x3
+        int slot = 0;
 
-        // INPUT 2
-        this.addSlot(new SlotItemHandler(
-                inventory,
-                1,
-                62,
-                35));
+        for (int row = 0; row < 3; row++) {
+            for (int col = 0; col < 3; col++) {
 
-        // INPUT 3
-        this.addSlot(new SlotItemHandler(
-                inventory,
-                2,
-                80,
-                35));
+                this.addSlot(new SlotItemHandler(
+                        inventory,
+                        slot++,
+                        30 + col * 18,
+                        17 + row * 18
+                ));
+            }
+        }
 
         // OUTPUT
         this.addSlot(new SlotItemHandler(
                 inventory,
-                3,
-                134,
-                35));
+                9,
+                124,
+                35
+        ));
 
-        // Inventario principal
+        // INVENTARIO DEL JUGADOR
         for (int row = 0; row < 3; row++) {
             for (int col = 0; col < 9; col++) {
 
@@ -69,7 +64,7 @@ public class JavaCompilerMenu extends AbstractContainerMenu {
             }
         }
 
-        // Hotbar
+        // HOTBAR
         for (int col = 0; col < 9; col++) {
 
             this.addSlot(new Slot(

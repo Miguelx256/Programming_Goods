@@ -15,7 +15,7 @@ import net.minecraftforge.items.ItemStackHandler;
 
 public class JavaCompilerBlockEntity extends BlockEntity implements MenuProvider {
 
-    private final ItemStackHandler itemHandler = new ItemStackHandler(4);
+    private final ItemStackHandler itemHandler = new ItemStackHandler(10);
 
     private LazyOptional<ItemStackHandler> lazyItemHandler =
             LazyOptional.empty();

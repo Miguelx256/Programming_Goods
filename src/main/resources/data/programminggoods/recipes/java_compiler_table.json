@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#@#",
+    "@!@",
+    "#@#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:iron_block"
+    },
+    "@": {
+      "item": "minecraft:redstone"
+    },
+    "!": {
+      "item": "minecraft:comparator"
+    }
+  },
+  "result": {
+    "item": "programminggoods:java_compiler_table",
+    "count": 1
+  }
+}
