@@ -4,7 +4,6 @@ import net.miguelx46.programminggoods.item.ModItems;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.items.ItemStackHandler;
-import net.minecraft.world.item.Items;
 
 public class JavaCompilerRecipes {
 
