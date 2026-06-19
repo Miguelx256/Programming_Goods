@@ -5,6 +5,7 @@ import net.miguelx46.programminggoods.block.ModBlocks;
 import net.miguelx46.programminggoods.block.entity.ModBlockEntities;
 import net.miguelx46.programminggoods.item.ModCreativeModTabs;
 import net.miguelx46.programminggoods.item.ModItems;
+import net.miguelx46.programminggoods.menu.ModMenuTypes;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -32,6 +33,7 @@ public class ProgrammingGoods {
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
