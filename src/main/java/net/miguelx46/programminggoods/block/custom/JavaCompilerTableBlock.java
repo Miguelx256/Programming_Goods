@@ -1,6 +1,7 @@
 package net.miguelx46.programminggoods.block.custom;
 
 import net.miguelx46.programminggoods.block.entity.JavaCompilerBlockEntity;
+import net.miguelx46.programminggoods.block.entity.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
@@ -12,6 +13,8 @@ import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
@@ -54,5 +57,19 @@ public class JavaCompilerTableBlock extends BaseEntityBlock
         }
 
         return InteractionResult.sidedSuccess(level.isClientSide());
+    }
+
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(
+            Level level,
+            BlockState state,
+            BlockEntityType<T> blockEntityType) {
+
+        return createTickerHelper(
+                blockEntityType,
+                ModBlockEntities.JAVA_COMPILER_BE.get(),
+                (level1, pos, state1, blockEntity) ->
+                        JavaCompilerBlockEntity.tick(blockEntity)
+        );
     }
 }

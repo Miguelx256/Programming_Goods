@@ -1,6 +1,7 @@
 package net.miguelx46.programminggoods.block.entity;
 
 import net.miguelx46.programminggoods.menu.JavaCompilerMenu;
+import net.miguelx46.programminggoods.recipe.JavaCompilerRecipes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -8,6 +9,7 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.util.LazyOptional;
@@ -71,5 +73,16 @@ public class JavaCompilerBlockEntity extends BlockEntity implements MenuProvider
 
     public ItemStackHandler getItemHandler() {
         return itemHandler;
+    }
+
+    public static void tick(JavaCompilerBlockEntity entity) {
+
+        ItemStack result =
+                JavaCompilerRecipes.getResult(
+                        entity.getItemHandler());
+
+        entity.getItemHandler().setStackInSlot(
+                9,
+                result.copy());
     }
 }

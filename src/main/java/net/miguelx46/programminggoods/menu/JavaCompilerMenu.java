@@ -44,7 +44,7 @@ public class JavaCompilerMenu extends AbstractContainerMenu {
         }
 
         // OUTPUT
-        this.addSlot(new SlotItemHandler(
+        this.addSlot(new JavaCompilerResultSlot(
                 inventory,
                 9,
                 124,
