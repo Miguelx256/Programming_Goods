@@ -2,6 +2,7 @@ package net.miguelx46.programminggoods;
 
 import com.mojang.logging.LogUtils;
 import net.miguelx46.programminggoods.block.ModBlocks;
+import net.miguelx46.programminggoods.block.entity.ModBlockEntities;
 import net.miguelx46.programminggoods.item.ModCreativeModTabs;
 import net.miguelx46.programminggoods.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -30,6 +31,7 @@ public class ProgrammingGoods {
         ModCreativeModTabs.register(modEventBus); //llamada al metodo register y se le pasa un bus de eventos
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);

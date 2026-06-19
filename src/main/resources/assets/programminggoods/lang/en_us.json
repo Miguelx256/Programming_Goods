@@ -25,5 +25,7 @@
   "item.programminggoods.java_arraylist": "Java ArrayList",
   "item.programminggoods.java_hashmap": "Java HashMap",
   "item.programminggoods.java_stack": "Java Stack",
-  "item.programminggoods.java_binarytree": "Java BinaryTree"
+  "item.programminggoods.java_binarytree": "Java BinaryTree",
+
+  "block.programminggoods.java_compiler_table": "Java Compiler Table"
 }

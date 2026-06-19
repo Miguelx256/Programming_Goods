@@ -49,7 +49,7 @@ public class ModCreativeModTabs {
                         pOutput.accept((ModItems.JAVA_STACK.get()));
                         pOutput.accept((ModItems.JAVA_BINARYTREE.get()));
 
-
+                        pOutput.accept(ModBlocks.JAVA_COMPILER_TABLE.get());
                     })
                     .build());
 

@@ -2,11 +2,13 @@ package net.miguelx46.programminggoods.block;
 
 import net.miguelx46.programminggoods.ProgrammingGoods;
 import net.miguelx46.programminggoods.block.custom.FuelBlock;
+import net.miguelx46.programminggoods.block.custom.JavaCompilerTableBlock;
 import net.miguelx46.programminggoods.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CraftingTableBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -33,6 +35,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Item> ARRAY_FUEL_BLOCK_ITEM = ModItems.ITEMS.register("array_fuel_block",
             () -> new FuelBlock(ARRAY_FUEL_BLOCK.get(), new Item.Properties(), 30000));
+
+    public static final RegistryObject<Block> JAVA_COMPILER_TABLE =
+            registerBlock("java_compiler_table",
+                    () -> new JavaCompilerTableBlock(
+                            BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
