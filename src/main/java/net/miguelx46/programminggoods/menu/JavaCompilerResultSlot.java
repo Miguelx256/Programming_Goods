@@ -1,8 +1,8 @@
 package net.miguelx46.programminggoods.menu;
 
-import net.miguelx46.programminggoods.block.entity.JavaCompilerBlockEntity;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.SlotItemHandler;
@@ -29,6 +29,17 @@ public class JavaCompilerResultSlot extends SlotItemHandler {
     @Override
     public void onTake(Player player, ItemStack stack) {
 
+        if (!stack.isEmpty()) {
+
+            player.displayClientMessage(
+                    Component.literal(
+                            "[Java Compiler] Successfully compiled: "
+                                    + stack.getHoverName().getString()
+                    ).withStyle(ChatFormatting.GOLD),
+                    true
+            );
+        }
+
         consumeIngredients();
 
         super.onTake(player, stack);
@@ -45,7 +56,11 @@ public class JavaCompilerResultSlot extends SlotItemHandler {
 
                 ingredient.shrink(1);
 
-                inventory.setStackInSlot(i, ingredient);
+                if (ingredient.getCount() <= 0) {
+                    inventory.setStackInSlot(i, ItemStack.EMPTY);
+                } else {
+                    inventory.setStackInSlot(i, ingredient);
+                }
             }
         }
     }
