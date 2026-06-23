@@ -3,15 +3,20 @@ package net.miguelx46.programminggoods;
 import com.mojang.logging.LogUtils;
 import net.miguelx46.programminggoods.block.ModBlocks;
 import net.miguelx46.programminggoods.block.entity.ModBlockEntities;
+import net.miguelx46.programminggoods.client.renderer.JavaGolemRenderer;
 import net.miguelx46.programminggoods.client.screen.JavaCompilerScreen;
+import net.miguelx46.programminggoods.entity.ModEntities;
 import net.miguelx46.programminggoods.item.ModCreativeModTabs;
 import net.miguelx46.programminggoods.item.ModItems;
 import net.miguelx46.programminggoods.menu.ModMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -36,6 +41,7 @@ public class ProgrammingGoods {
         ModItems.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+        ModEntities.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
@@ -60,17 +66,47 @@ public class ProgrammingGoods {
 
     }
 
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @Mod.EventBusSubscriber(
+            modid = MOD_ID,
+            bus = Mod.EventBusSubscriber.Bus.MOD)
+    public static class ModEvents {
 
+        @SubscribeEvent
+        public static void registerAttributes(
+                EntityAttributeCreationEvent event) {
 
+            event.put(
+                    ModEntities.JAVA_GOLEM.get(),
+                    IronGolem.createAttributes().build()
+            );
+        }
+    }
+
+    @Mod.EventBusSubscriber(
+            modid = MOD_ID,
+            bus = Mod.EventBusSubscriber.Bus.MOD,
+            value = Dist.CLIENT)
     public static class ClientModEvents {
+
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+
             event.enqueueWork(() -> {
+
                 MenuScreens.register(
                         ModMenuTypes.JAVA_COMPILER_MENU.get(),
                         JavaCompilerScreen::new);
             });
+        }
+
+        @SubscribeEvent
+        public static void registerRenderers(
+                EntityRenderersEvent.RegisterRenderers event) {
+
+            event.registerEntityRenderer(
+                    ModEntities.JAVA_GOLEM.get(),
+                    JavaGolemRenderer::new
+            );
         }
     }
 }
