@@ -44,6 +44,15 @@ public class ModBlocks {
                                     .strength(50.0f, 1200.0f)
                     ));
 
+    public static final RegistryObject<Block> JAVA_STONE = registerBlock("java_stone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> JAVA_SMOOTH_STONE = registerBlock("java_smooth_stone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SMOOTH_STONE).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> JAVA_STONE_BRICKS = registerBlock("java_stone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).sound(SoundType.STONE)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

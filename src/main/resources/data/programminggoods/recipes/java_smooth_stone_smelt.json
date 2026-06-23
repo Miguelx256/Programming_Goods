@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 4,
+  "group": "java_object",
+  "ingredient": {
+    "item": "programminggoods:java_stone"
+  },
+  "result": "programminggoods:java_smooth_stone"
+}

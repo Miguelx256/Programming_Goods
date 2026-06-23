@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "## ",
+    "## ",
+    "   "
+  ],
+  "key": {
+    "#": {
+      "item": "programminggoods:java_stone"
+    }
+  },
+  "result": {
+    "item": "programminggoods:java_stone_bricks",
+    "count": 4
+  }
+}

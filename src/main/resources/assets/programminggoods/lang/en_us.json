@@ -27,5 +27,10 @@
   "item.programminggoods.java_stack": "Java Stack",
   "item.programminggoods.java_binarytree": "Java BinaryTree",
 
-  "block.programminggoods.java_compiler_table": "Java Compiler Table"
+  "block.programminggoods.java_compiler_table": "Java Compiler Table",
+
+  "block.programminggoods.java_smooth_stone": "Java Smooth Stone",
+  "block.programminggoods.java_stone": "Java Stone",
+  "block.programminggoods.java_stone_bricks": "Java Stone Bricks"
+
 }

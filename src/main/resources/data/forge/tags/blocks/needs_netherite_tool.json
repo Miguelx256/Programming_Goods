@@ -3,6 +3,9 @@
     "programminggoods:java_object_ore",
     "programminggoods:java_coffee_block",
     "programminggoods:array_fuel_block",
-    "programminggoods:java_compiler_table"
+    "programminggoods:java_compiler_table",
+    "programminggoods:java_stone",
+    "programminggoods:java_stone_bricks",
+    "programminggoods:java_smooth_stone"
   ]
 }
