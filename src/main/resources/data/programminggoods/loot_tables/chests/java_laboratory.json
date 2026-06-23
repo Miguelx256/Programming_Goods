@@ -1,0 +1,55 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "programminggoods:java_coffee",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "programminggoods:java_object",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "programminggoods:java_node",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "programminggoods:array_fuel",
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "programminggoods:java_arraylist",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "programminggoods:java_stack",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "programminggoods:java_hashmap",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "programminggoods:java_binarytree",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}
