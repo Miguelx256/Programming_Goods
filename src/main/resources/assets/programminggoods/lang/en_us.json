@@ -31,6 +31,8 @@
 
   "block.programminggoods.java_smooth_stone": "Java Smooth Stone",
   "block.programminggoods.java_stone": "Java Stone",
-  "block.programminggoods.java_stone_bricks": "Java Stone Bricks"
+  "block.programminggoods.java_stone_bricks": "Java Stone Bricks",
+
+  "entity.programminggoods.java_golem": "Java Golem"
 
 }

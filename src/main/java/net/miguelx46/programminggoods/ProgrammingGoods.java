@@ -10,6 +10,7 @@ import net.miguelx46.programminggoods.item.ModCreativeModTabs;
 import net.miguelx46.programminggoods.item.ModItems;
 import net.miguelx46.programminggoods.menu.ModMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -77,7 +78,13 @@ public class ProgrammingGoods {
 
             event.put(
                     ModEntities.JAVA_GOLEM.get(),
-                    IronGolem.createAttributes().build()
+
+                    IronGolem.createAttributes()
+
+                            .add(Attributes.MAX_HEALTH, 300.0D)
+                            .add(Attributes.ATTACK_DAMAGE, 25.0D)
+                            .add(Attributes.MOVEMENT_SPEED, 0.60D)
+                            .build()
             );
         }
     }

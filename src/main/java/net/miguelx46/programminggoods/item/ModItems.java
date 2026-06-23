@@ -2,7 +2,9 @@ package net.miguelx46.programminggoods.item;
 
 import net.miguelx46.programminggoods.ProgrammingGoods;
 import net.miguelx46.programminggoods.block.custom.FuelItem;
+import net.miguelx46.programminggoods.entity.ModEntities;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -55,6 +57,14 @@ public class ModItems {
     public static final RegistryObject<Item> JAVA_STACK = ITEMS.register("java_stack", () -> new Item(new Item.Properties().food(ModFoods.JAVA_STACK).stacksTo(64)));
 
     public static final RegistryObject<Item> JAVA_BINARYTREE = ITEMS.register("java_binarytree", () -> new Item(new Item.Properties().food(ModFoods.JAVA_BINARYTREE).stacksTo(64)));
+
+    public static final RegistryObject<Item> JAVA_GOLEM_SPAWN_EGG =
+            ITEMS.register("java_golem_spawn_egg",
+                    () -> new ForgeSpawnEggItem(
+                            ModEntities.JAVA_GOLEM,
+                            0x8B5A2B,
+                            0xFF8C00,
+                            new Item.Properties()));
 
     // registrar los items dado un bus de eventos
     public static void register(IEventBus eventBus) {
