@@ -46,32 +46,6 @@ public class ModPlacedFeatures {
                         )
                 )
         );
-
-        Holder<ConfiguredFeature<?, ?>> javaLab =
-                context.lookup(Registries.CONFIGURED_FEATURE)
-                        .getOrThrow(
-                                ModConfiguredFeatures.JAVA_LAB_KEY);
-
-        context.register(
-                JAVA_LAB_PLACED_KEY,
-
-                new PlacedFeature(
-                        javaLab,
-
-                        List.of(
-                                RarityFilter.onAverageOnceEvery(40),
-
-                                InSquarePlacement.spread(),
-
-                                HeightRangePlacement.uniform(
-                                        VerticalAnchor.absolute(-60),
-                                        VerticalAnchor.absolute(-40)
-                                ),
-
-                                BiomeFilter.biome()
-                        )
-                )
-        );
     }
 
     public static ResourceKey<PlacedFeature>
