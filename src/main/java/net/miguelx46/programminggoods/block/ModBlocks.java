@@ -3,6 +3,7 @@ package net.miguelx46.programminggoods.block;
 import net.miguelx46.programminggoods.ProgrammingGoods;
 import net.miguelx46.programminggoods.block.custom.FuelBlock;
 import net.miguelx46.programminggoods.block.custom.JavaCompilerTableBlock;
+import net.miguelx46.programminggoods.block.custom.JavaHyperStoneBlock;
 import net.miguelx46.programminggoods.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -52,6 +53,17 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> JAVA_STONE_BRICKS = registerBlock("java_stone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> JAVA_HYPER_STONE =
+            registerBlock(
+                    "java_hyper_stone",
+                    () -> new JavaHyperStoneBlock(
+                            BlockBehaviour.Properties
+                                    .copy(Blocks.NETHERITE_BLOCK)
+                                    .strength(1.0F, 1200.0F)
+                                    .requiresCorrectToolForDrops()
+                    )
+            );
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

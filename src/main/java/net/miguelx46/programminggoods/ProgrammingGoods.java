@@ -7,10 +7,12 @@ import net.miguelx46.programminggoods.client.renderer.JavaGolemRenderer;
 import net.miguelx46.programminggoods.client.screen.JavaCompilerScreen;
 import net.miguelx46.programminggoods.command.ModCommands;
 import net.miguelx46.programminggoods.entity.ModEntities;
+import net.miguelx46.programminggoods.event.JavaLabReplacer;
 import net.miguelx46.programminggoods.event.VillageJavaGolemSpawner;
 import net.miguelx46.programminggoods.item.ModCreativeModTabs;
 import net.miguelx46.programminggoods.item.ModItems;
 import net.miguelx46.programminggoods.menu.ModMenuTypes;
+import net.miguelx46.programminggoods.world.ModBiomeModifiers;
 import net.miguelx46.programminggoods.world.ModFeatures;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -60,6 +62,8 @@ public class ProgrammingGoods {
         MinecraftForge.EVENT_BUS.register(
                 new VillageJavaGolemSpawner()
         );
+
+
 
         modEventBus.addListener(this::addCreative);
     }

@@ -21,6 +21,10 @@ public class ModConfiguredFeatures {
             JAVA_OBJECT_ORE_KEY =
             registerKey("java_object_ore");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>>
+            JAVA_HYPER_STONE_KEY =
+            registerKey("java_hyper_stone");
+
     public static void bootstrap(
             BootstapContext<ConfiguredFeature<?, ?>> context) {
 
@@ -50,7 +54,31 @@ public class ModConfiguredFeatures {
                 )
         );
 
+        List<OreConfiguration.TargetBlockState>
+                overworldJavaHyperStone = List.of(
 
+                OreConfiguration.target(
+                        new TagMatchTest(
+                                BlockTags.STONE_ORE_REPLACEABLES),
+                        ModBlocks.JAVA_HYPER_STONE.get()
+                                .defaultBlockState()),
+
+                OreConfiguration.target(
+                        new TagMatchTest(
+                                BlockTags.DEEPSLATE_ORE_REPLACEABLES),
+                        ModBlocks.JAVA_HYPER_STONE.get()
+                                .defaultBlockState())
+        );
+
+        register(
+                context,
+                JAVA_HYPER_STONE_KEY,
+                Feature.ORE,
+                new OreConfiguration(
+                        overworldJavaHyperStone,
+                        1
+                )
+        );
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>>

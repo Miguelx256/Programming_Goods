@@ -19,8 +19,8 @@ public class ModPlacedFeatures {
             registerKey("java_object_ore_placed");
 
     public static final ResourceKey<PlacedFeature>
-            JAVA_LAB_PLACED_KEY =
-            registerKey("java_lab_placed");
+            JAVA_HYPER_STONE_PLACED_KEY =
+            registerKey("java_hyper_stone_placed");
 
     public static void bootstrap(
             BootstapContext<PlacedFeature> context) {
@@ -41,11 +41,34 @@ public class ModPlacedFeatures {
 
                                 HeightRangePlacement.uniform(
                                         VerticalAnchor.absolute(-60),
-                                        VerticalAnchor.absolute(-30)
+                                        VerticalAnchor.absolute(-40)
                                 )
                         )
                 )
         );
+
+        Holder<ConfiguredFeature<?, ?>> javaHyperStone =
+                context.lookup(Registries.CONFIGURED_FEATURE)
+                        .getOrThrow(
+                                ModConfiguredFeatures.JAVA_HYPER_STONE_KEY);
+
+        context.register(
+                JAVA_HYPER_STONE_PLACED_KEY,
+
+                new PlacedFeature(
+                        javaHyperStone,
+
+                        commonOrePlacement(
+                                1,
+
+                                HeightRangePlacement.uniform(
+                                        VerticalAnchor.absolute(-50),
+                                        VerticalAnchor.absolute(-15)
+                                )
+                        )
+                )
+        );
+
     }
 
     public static ResourceKey<PlacedFeature>

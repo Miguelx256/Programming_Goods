@@ -56,7 +56,7 @@ public class ModCreativeModTabs {
 
                         pOutput.accept(ModBlocks.JAVA_COMPILER_TABLE.get());
 
-
+                        pOutput.accept(ModBlocks.JAVA_HYPER_STONE.get());
                     })
                     .build());
 
