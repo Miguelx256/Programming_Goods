@@ -9,8 +9,8 @@ public class ModEntityAttributes {
     public static AttributeSupplier.Builder createJavaGolemAttributes() {
 
         return IronGolem.createAttributes()
-                .add(Attributes.MAX_HEALTH, 150.0D)
-                .add(Attributes.ATTACK_DAMAGE, 20.0D)
-                .add(Attributes.MOVEMENT_SPEED, 0.25D);
+                .add(Attributes.MAX_HEALTH, 400.0D)
+                .add(Attributes.ATTACK_DAMAGE, 22.0D)
+                .add(Attributes.MOVEMENT_SPEED, 0.6D);
     }
 }

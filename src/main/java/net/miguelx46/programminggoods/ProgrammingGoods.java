@@ -7,6 +7,7 @@ import net.miguelx46.programminggoods.client.renderer.JavaGolemRenderer;
 import net.miguelx46.programminggoods.client.screen.JavaCompilerScreen;
 import net.miguelx46.programminggoods.command.ModCommands;
 import net.miguelx46.programminggoods.entity.ModEntities;
+import net.miguelx46.programminggoods.event.VillageJavaGolemSpawner;
 import net.miguelx46.programminggoods.item.ModCreativeModTabs;
 import net.miguelx46.programminggoods.item.ModItems;
 import net.miguelx46.programminggoods.menu.ModMenuTypes;
@@ -38,15 +39,26 @@ public class ProgrammingGoods {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public ProgrammingGoods() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        ModCreativeModTabs.register(modEventBus); //llamada al metodo register y se le pasa un bus de eventos
+
+        IEventBus modEventBus =
+                FMLJavaModLoadingContext.get()
+                        .getModEventBus();
+
+        ModCreativeModTabs.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
         ModEntities.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
+
         MinecraftForge.EVENT_BUS.register(this);
+
+        MinecraftForge.EVENT_BUS.register(
+                new VillageJavaGolemSpawner()
+        );
+
         modEventBus.addListener(this::addCreative);
     }
 

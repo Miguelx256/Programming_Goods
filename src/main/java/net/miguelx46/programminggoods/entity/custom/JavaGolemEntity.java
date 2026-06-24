@@ -15,7 +15,7 @@ public class JavaGolemEntity extends IronGolem {
 
         super(entityType, level);
 
-        this.xpReward = 60;
+        this.xpReward = 80;
     }
 
     @Override
