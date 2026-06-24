@@ -36,7 +36,7 @@ public class ModCommands {
                             Optional<StructureTemplate>
                                     optionalTemplate =
                                     level.getStructureManager().get(
-                                            new ResourceLocation(
+                                            ResourceLocation.fromNamespaceAndPath(
                                                     ProgrammingGoods.MOD_ID,
                                                     "java_lab"
                                             )
