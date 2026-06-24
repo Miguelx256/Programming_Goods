@@ -5,6 +5,7 @@ import net.miguelx46.programminggoods.block.ModBlocks;
 import net.miguelx46.programminggoods.block.entity.ModBlockEntities;
 import net.miguelx46.programminggoods.client.renderer.JavaGolemRenderer;
 import net.miguelx46.programminggoods.client.screen.JavaCompilerScreen;
+import net.miguelx46.programminggoods.command.ModCommands;
 import net.miguelx46.programminggoods.entity.ModEntities;
 import net.miguelx46.programminggoods.item.ModCreativeModTabs;
 import net.miguelx46.programminggoods.item.ModItems;
@@ -17,6 +18,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -65,6 +67,14 @@ public class ProgrammingGoods {
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
 
+    }
+
+    @SubscribeEvent
+    public void registerCommands(
+            RegisterCommandsEvent event) {
+
+        ModCommands.register(
+                event.getDispatcher());
     }
 
     @Mod.EventBusSubscriber(

@@ -17,8 +17,8 @@ import java.util.List;
 public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>>
-            JAVA_OBJECT_ORE_KEY = registerKey(
-            "java_object_ore");
+            JAVA_OBJECT_ORE_KEY =
+            registerKey("java_object_ore");
 
     public static void bootstrap(
             BootstapContext<ConfiguredFeature<?, ?>> context) {
@@ -27,12 +27,16 @@ public class ModConfiguredFeatures {
                 overworldJavaOres = List.of(
 
                 OreConfiguration.target(
-                        new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES),
-                        ModBlocks.JAVA_OBJECT_ORE.get().defaultBlockState()),
+                        new TagMatchTest(
+                                BlockTags.STONE_ORE_REPLACEABLES),
+                        ModBlocks.JAVA_OBJECT_ORE.get()
+                                .defaultBlockState()),
 
                 OreConfiguration.target(
-                        new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES),
-                        ModBlocks.JAVA_OBJECT_ORE.get().defaultBlockState())
+                        new TagMatchTest(
+                                BlockTags.DEEPSLATE_ORE_REPLACEABLES),
+                        ModBlocks.JAVA_OBJECT_ORE.get()
+                                .defaultBlockState())
         );
 
         register(
@@ -53,10 +57,13 @@ public class ModConfiguredFeatures {
                 Registries.CONFIGURED_FEATURE,
                 new ResourceLocation(
                         ProgrammingGoods.MOD_ID,
-                        name));
+                        name
+                )
+        );
     }
 
-    private static <FC extends net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration,
+    private static <
+            FC extends net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration,
             F extends Feature<FC>>
     void register(
             BootstapContext<ConfiguredFeature<?, ?>> context,
@@ -68,6 +75,8 @@ public class ModConfiguredFeatures {
                 key,
                 new ConfiguredFeature<>(
                         feature,
-                        configuration));
+                        configuration
+                )
+        );
     }
 }

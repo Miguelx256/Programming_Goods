@@ -33,6 +33,7 @@
   "block.programminggoods.java_stone": "Java Stone",
   "block.programminggoods.java_stone_bricks": "Java Stone Bricks",
 
+  "item.programminggoods.java_golem_spawn_egg": "Java Golem Spawn Egg",
   "entity.programminggoods.java_golem": "Java Golem"
 
 }
