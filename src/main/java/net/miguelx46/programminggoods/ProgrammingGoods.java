@@ -11,6 +11,7 @@ import net.miguelx46.programminggoods.event.VillageJavaGolemSpawner;
 import net.miguelx46.programminggoods.item.ModCreativeModTabs;
 import net.miguelx46.programminggoods.item.ModItems;
 import net.miguelx46.programminggoods.menu.ModMenuTypes;
+
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.animal.IronGolem;
@@ -58,6 +59,8 @@ public class ProgrammingGoods {
         MinecraftForge.EVENT_BUS.register(
                 new VillageJavaGolemSpawner()
         );
+
+
 
         modEventBus.addListener(this::addCreative);
     }
