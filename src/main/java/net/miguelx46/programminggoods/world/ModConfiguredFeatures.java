@@ -21,6 +21,10 @@ public class ModConfiguredFeatures {
             JAVA_OBJECT_ORE_KEY =
             registerKey("java_object_ore");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>>
+            JAVA_LAB_KEY =
+            registerKey("java_lab");
+
     public static void bootstrap(
             BootstapContext<ConfiguredFeature<?, ?>> context) {
 
@@ -48,6 +52,13 @@ public class ModConfiguredFeatures {
                         overworldJavaOres,
                         7
                 )
+        );
+
+        register(
+                context,
+                JAVA_LAB_KEY,
+                ModFeatures.JAVA_LAB.get(),
+                NoneFeatureConfiguration.INSTANCE
         );
     }
 

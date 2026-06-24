@@ -18,6 +18,10 @@ public class ModPlacedFeatures {
             JAVA_OBJECT_ORE_PLACED_KEY =
             registerKey("java_object_ore_placed");
 
+    public static final ResourceKey<PlacedFeature>
+            JAVA_LAB_PLACED_KEY =
+            registerKey("java_lab_placed");
+
     public static void bootstrap(
             BootstapContext<PlacedFeature> context) {
 
@@ -39,6 +43,32 @@ public class ModPlacedFeatures {
                                         VerticalAnchor.absolute(-60),
                                         VerticalAnchor.absolute(-30)
                                 )
+                        )
+                )
+        );
+
+        Holder<ConfiguredFeature<?, ?>> javaLab =
+                context.lookup(Registries.CONFIGURED_FEATURE)
+                        .getOrThrow(
+                                ModConfiguredFeatures.JAVA_LAB_KEY);
+
+        context.register(
+                JAVA_LAB_PLACED_KEY,
+
+                new PlacedFeature(
+                        javaLab,
+
+                        List.of(
+                                RarityFilter.onAverageOnceEvery(40),
+
+                                InSquarePlacement.spread(),
+
+                                HeightRangePlacement.uniform(
+                                        VerticalAnchor.absolute(-60),
+                                        VerticalAnchor.absolute(-40)
+                                ),
+
+                                BiomeFilter.biome()
                         )
                 )
         );
