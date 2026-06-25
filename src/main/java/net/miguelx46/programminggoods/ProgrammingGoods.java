@@ -7,6 +7,7 @@ import net.miguelx46.programminggoods.client.renderer.JavaGolemRenderer;
 import net.miguelx46.programminggoods.client.screen.JavaCompilerScreen;
 import net.miguelx46.programminggoods.command.ModCommands;
 import net.miguelx46.programminggoods.entity.ModEntities;
+import net.miguelx46.programminggoods.entity.custom.JavaZombieEntity;
 import net.miguelx46.programminggoods.event.JavaLabReplacer;
 import net.miguelx46.programminggoods.event.VillageJavaGolemSpawner;
 import net.miguelx46.programminggoods.item.ModCreativeModTabs;
@@ -16,6 +17,7 @@ import net.miguelx46.programminggoods.world.ModFeatures;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.animal.IronGolem;
+import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -109,6 +111,15 @@ public class ProgrammingGoods {
                             .add(Attributes.MAX_HEALTH, 300.0D)
                             .add(Attributes.ATTACK_DAMAGE, 25.0D)
                             .add(Attributes.MOVEMENT_SPEED, 0.60D)
+                            .build()
+            );
+
+            event.put(
+                    ModEntities.JAVA_ZOMBIE.get(),
+                    Zombie.createAttributes()
+                            .add(Attributes.MAX_HEALTH, 30.0D)
+                            .add(Attributes.ATTACK_DAMAGE, 6.0D)
+                            .add(Attributes.MOVEMENT_SPEED, 0.28D)
                             .build()
             );
         }
