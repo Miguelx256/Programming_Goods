@@ -36,5 +36,6 @@
   "item.programminggoods.java_golem_spawn_egg": "Java Golem Spawn Egg",
   "entity.programminggoods.java_golem": "Java Golem",
 
-  "block.programminggoods.java_hyper_stone": "Java Hyper Stone"
+  "block.programminggoods.java_hyper_stone": "Java Hyper Stone",
+  "block.programminggoods.java_deepslate": "Java Deepslate"
 }

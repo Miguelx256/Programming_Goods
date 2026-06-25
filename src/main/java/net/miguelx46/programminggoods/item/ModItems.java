@@ -37,10 +37,12 @@ public class ModItems {
             () -> new SwordItem(ModToolTiers.JAVA, 9, 3, new Item.Properties().stacksTo(1).durability(3000)));
 
     public static final RegistryObject<Item> JAVA_PICKAXE = ITEMS.register("java_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.JAVA, 1, 1, new Item.Properties().stacksTo(1).durability(3000)));
+            () -> new PickaxeItem(ModToolTiers.JAVA, 1, 1, new Item.Properties()
+                    .stacksTo(1).durability(3000)));
 
     public static final RegistryObject<Item> JAVA_AXE = ITEMS.register("java_axe",
-            () -> new AxeItem(ModToolTiers.JAVA, 7, 1, new Item.Properties().stacksTo(1).durability(3000)));
+            () -> new AxeItem(ModToolTiers.JAVA, 7, 1, new Item.Properties()
+                    .stacksTo(1).durability(3000)));
 
     public static final RegistryObject<Item> JAVA_SHOVEL = ITEMS.register("java_shovel",
             () -> new ShovelItem(ModToolTiers.JAVA, 0, 0, new Item.Properties().stacksTo(1).durability(3000)));

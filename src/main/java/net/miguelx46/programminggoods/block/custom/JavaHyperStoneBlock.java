@@ -138,9 +138,9 @@ public class JavaHyperStoneBlock extends Block {
                 x,
                 y,
                 z,
-                0.0,
                 0.02,
-                0.0
+                0.02,
+                0.02
         );
     }
 }

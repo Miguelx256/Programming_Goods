@@ -11,12 +11,7 @@
       ],
       "conditions": [
         {
-          "condition": "minecraft:match_tool",
-          "predicate": {
-            "items": [
-              "minecraft:netherite_pickaxe"
-            ]
-          }
+          "condition": "minecraft:survives_explosion"
         }
       ]
     }

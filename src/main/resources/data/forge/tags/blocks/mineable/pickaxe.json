@@ -1,1 +1,12 @@
-"programminggoods:java_hyper_stone"
+{
+  "replace": false,
+  "values": [
+    "programminggoods:java_object_ore",
+    "programminggoods:java_compiler_table",
+    "programminggoods:java_stone",
+    "programminggoods:java_smooth_stone",
+    "programminggoods:java_stone_bricks",
+    "programminggoods:java_hyper_stone",
+    "programminggoods:java_deepslate"
+  ]
+}

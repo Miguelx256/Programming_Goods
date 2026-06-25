@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ModToolTiers {
     public static final Tier JAVA = TierSortingRegistry.registerTier(
-            new ForgeTier(5, 1500, 5f, 4f, 25,
+            new ForgeTier(5, 3000, 9f, 4f, 30,
                     ModTags.Blocks.NEEDS_JAVA_TOOL, () -> Ingredient.of(ModItems.JAVA_COFFEE.get())),
             new ResourceLocation(ProgrammingGoods.MOD_ID, "java"), List.of(Tiers.NETHERITE), List.of());
 }

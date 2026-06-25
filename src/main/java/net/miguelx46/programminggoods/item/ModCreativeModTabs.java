@@ -36,6 +36,8 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.JAVA_STONE.get());
                         pOutput.accept(ModBlocks.JAVA_STONE_BRICKS.get());
                         pOutput.accept(ModBlocks.JAVA_SMOOTH_STONE.get());
+                        pOutput.accept(ModBlocks.JAVA_DEEPSLATE.get());
+
                         pOutput.accept(ModItems.JAVA_GOLEM_SPAWN_EGG.get());
 
 

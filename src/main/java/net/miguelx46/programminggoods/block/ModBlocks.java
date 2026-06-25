@@ -42,7 +42,7 @@ public class ModBlocks {
                     () -> new JavaCompilerTableBlock(
                             BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                                     .requiresCorrectToolForDrops()
-                                    .strength(50.0f, 1200.0f)
+                                    .strength(10.0f, 1200.0f)
                     ));
 
     public static final RegistryObject<Block> JAVA_STONE = registerBlock("java_stone",
@@ -54,13 +54,20 @@ public class ModBlocks {
     public static final RegistryObject<Block> JAVA_STONE_BRICKS = registerBlock("java_stone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).sound(SoundType.STONE)));
 
+    public static final RegistryObject<Block> JAVA_DEEPSLATE =
+            registerBlock("java_deepslate",
+                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
+                            .sound(SoundType.DEEPSLATE)
+                            .strength(4.0F, 6.0F)
+                            .requiresCorrectToolForDrops()));
+
     public static final RegistryObject<Block> JAVA_HYPER_STONE =
             registerBlock(
                     "java_hyper_stone",
                     () -> new JavaHyperStoneBlock(
                             BlockBehaviour.Properties
                                     .copy(Blocks.DIAMOND_ORE)
-                                    .strength(1.0F, 1200.0F)
+                                    .strength(0.4f, 1200.0F)
                                     .requiresCorrectToolForDrops()
                                     .lightLevel(state -> 3)
                     )
