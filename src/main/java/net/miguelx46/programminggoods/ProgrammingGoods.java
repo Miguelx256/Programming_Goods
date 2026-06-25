@@ -12,7 +12,6 @@ import net.miguelx46.programminggoods.event.VillageJavaGolemSpawner;
 import net.miguelx46.programminggoods.item.ModCreativeModTabs;
 import net.miguelx46.programminggoods.item.ModItems;
 import net.miguelx46.programminggoods.menu.ModMenuTypes;
-import net.miguelx46.programminggoods.world.ModBiomeModifiers;
 import net.miguelx46.programminggoods.world.ModFeatures;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -39,7 +38,7 @@ public class ProgrammingGoods {
 
     public static final String MOD_ID = "programminggoods";
 
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public ProgrammingGoods() {
 

@@ -7,6 +7,7 @@ import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
@@ -55,6 +56,8 @@ public class ModConfiguredFeatures {
                         7
                 )
         );
+
+        // ----------------- JAVA HYPER STONE --------------------
 
         List<OreConfiguration.TargetBlockState>
                 overworldJavaHyperStone = List.of(

@@ -22,8 +22,7 @@ public class ModPlacedFeatures {
             JAVA_HYPER_STONE_PLACED_KEY =
             registerKey("java_hyper_stone_placed");
 
-    public static void bootstrap(
-            BootstapContext<PlacedFeature> context) {
+    public static void bootstrap(BootstapContext<PlacedFeature> context) {
 
         // ================= JAVA OBJECT ORE =================
 
@@ -78,6 +77,8 @@ public class ModPlacedFeatures {
                 )
         );
     }
+
+
 
     public static ResourceKey<PlacedFeature>
     registerKey(String name) {
