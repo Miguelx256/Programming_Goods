@@ -2,6 +2,7 @@ package net.miguelx46.programminggoods.entity;
 
 import net.miguelx46.programminggoods.ProgrammingGoods;
 import net.miguelx46.programminggoods.entity.custom.JavaGolemEntity;
+import net.miguelx46.programminggoods.entity.custom.JavaSkeletonEntity;
 import net.miguelx46.programminggoods.entity.custom.JavaZombieEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -46,6 +47,20 @@ public class ModEntities {
                             .clientTrackingRange(8)
                             .setUpdateInterval(3)
                             .build("java_zombie"));
+
+    public static final RegistryObject<EntityType<JavaSkeletonEntity>>
+            JAVA_SKELETON =
+
+            ENTITIES.register(
+                    "java_skeleton",
+
+                    () -> EntityType.Builder
+                            .of(
+                                    JavaSkeletonEntity::new,
+                                    MobCategory.MONSTER
+                            )
+                            .sized(0.6F, 1.99F)
+                            .build("java_skeleton"));
 
     public static void register(IEventBus eventBus) {
         ENTITIES.register(eventBus);

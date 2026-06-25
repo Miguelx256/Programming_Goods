@@ -78,6 +78,25 @@ public class ModItems {
                             0xFF8C00,
                             new Item.Properties()));
 
+    public static final RegistryObject<Item> JAVA_SKELETON_SPAWN_EGG =
+            ITEMS.register(
+                    "java_skeleton_spawn_egg",
+
+                    () -> new ForgeSpawnEggItem(
+                            ModEntities.JAVA_SKELETON,
+                            0xD8D8D8,
+                            0x222222,
+                            new Item.Properties()
+                    ));
+
+    public static final RegistryObject<Item> JAVA_BONE =
+            ITEMS.register("java_bone",
+                    () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> JAVA_GUNPOWDER =
+            ITEMS.register("java_gunpowder",
+                    () -> new Item(new Item.Properties()));
+
     // registrar los items dado un bus de eventos
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

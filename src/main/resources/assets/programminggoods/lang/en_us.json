@@ -36,10 +36,14 @@
 
   "item.programminggoods.java_golem_spawn_egg": "Java Golem Spawn Egg",
   "item.programminggoods.java_zombie_spawn_egg": "Java Zombie Spawn Egg",
+  "item.programminggoods.java_skeleton_spawn_egg": "Java Skeleton Spawn Egg",
+  "item.programminggoods.java_creeper_spawn_egg": "Java Creeper Spawn Egg",
 
   "entity.programminggoods.java_golem": "Java Golem",
   "entity.programminggoods.java_zombie": "Java Zombie",
 
   "block.programminggoods.java_hyper_stone": "Java Hyper Stone",
   "block.programminggoods.java_deepslate": "Java Deepslate"
+
+
 }
