@@ -8,5 +8,6 @@ public class JavaZombieEntity extends Zombie {
 
     public JavaZombieEntity(EntityType<? extends Zombie> entityType, Level level) {
         super(entityType, level);
+        this.xpReward = 15;
     }
 }

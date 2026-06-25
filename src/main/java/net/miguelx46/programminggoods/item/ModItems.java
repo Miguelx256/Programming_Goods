@@ -68,6 +68,16 @@ public class ModItems {
                             0xFF8C00,
                             new Item.Properties()));
 
+    public static final RegistryObject<Item> JAVA_ROTTEN_FLESH = ITEMS.register("java_rotten_flesh", () -> new Item(new Item.Properties().food(ModFoods.JAVA_ROTTEN_FLESH).stacksTo(64)));
+
+    public static final RegistryObject<Item> JAVA_ZOMBIE_SPAWN_EGG =
+            ITEMS.register("java_zombie_spawn_egg",
+                    () -> new ForgeSpawnEggItem(
+                            ModEntities.JAVA_ZOMBIE,
+                            0x8B5A2B,
+                            0xFF8C00,
+                            new Item.Properties()));
+
     // registrar los items dado un bus de eventos
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

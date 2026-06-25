@@ -43,6 +43,8 @@ public class ModEntities {
                                     MobCategory.MONSTER
                             )
                             .sized(0.6F, 1.95F)
+                            .clientTrackingRange(8)
+                            .setUpdateInterval(3)
                             .build("java_zombie"));
 
     public static void register(IEventBus eventBus) {

@@ -26,6 +26,7 @@
   "item.programminggoods.java_hashmap": "Java HashMap",
   "item.programminggoods.java_stack": "Java Stack",
   "item.programminggoods.java_binarytree": "Java BinaryTree",
+  "item.programminggoods.java_rotten_flesh": "Java Rotten Flesh",
 
   "block.programminggoods.java_compiler_table": "Java Compiler Table",
 
@@ -34,7 +35,10 @@
   "block.programminggoods.java_stone_bricks": "Java Stone Bricks",
 
   "item.programminggoods.java_golem_spawn_egg": "Java Golem Spawn Egg",
+  "item.programminggoods.java_zombie_spawn_egg": "Java Zombie Spawn Egg",
+
   "entity.programminggoods.java_golem": "Java Golem",
+  "entity.programminggoods.java_zombie": "Java Zombie",
 
   "block.programminggoods.java_hyper_stone": "Java Hyper Stone",
   "block.programminggoods.java_deepslate": "Java Deepslate"

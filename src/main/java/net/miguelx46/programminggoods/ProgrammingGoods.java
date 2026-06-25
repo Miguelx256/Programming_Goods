@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.miguelx46.programminggoods.block.ModBlocks;
 import net.miguelx46.programminggoods.block.entity.ModBlockEntities;
 import net.miguelx46.programminggoods.client.renderer.JavaGolemRenderer;
+import net.miguelx46.programminggoods.client.renderer.JavaZombieRenderer;
 import net.miguelx46.programminggoods.client.screen.JavaCompilerScreen;
 import net.miguelx46.programminggoods.command.ModCommands;
 import net.miguelx46.programminggoods.entity.ModEntities;
@@ -149,6 +150,11 @@ public class ProgrammingGoods {
             event.registerEntityRenderer(
                     ModEntities.JAVA_GOLEM.get(),
                     JavaGolemRenderer::new
+            );
+
+            event.registerEntityRenderer(
+                    ModEntities.JAVA_ZOMBIE.get(),
+                    JavaZombieRenderer::new
             );
         }
     }

@@ -9,6 +9,11 @@ public class ModFoods {
     public static final FoodProperties JAVA_JUICE = new FoodProperties.Builder().nutrition(5)
             .saturationMod(0.5f).effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 4000, 2), 10f).build();
 
+    public static final FoodProperties JAVA_ROTTEN_FLESH = new FoodProperties.Builder().nutrition(4)
+            .saturationMod(0.4f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 0), 10f)
+            .build();
+
     public static final FoodProperties JAVA_APPLE = new FoodProperties.Builder().nutrition(8)
             .saturationMod(0.4f)
             .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 240, 2), 10f)
