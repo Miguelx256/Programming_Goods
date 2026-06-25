@@ -1,8 +1,8 @@
 {
   "type": "minecraft:ore",
   "config": {
-    "size": 1,
-    "discard_chance_on_air_exposure": 0.0,
+    "size": 3,
+    "discard_chance_on_air_exposure": 0.9,
     "targets": [
       {
         "target": {
@@ -10,7 +10,8 @@
           "tag": "minecraft:stone_ore_replaceables"
         },
         "state": {
-          "Name": "programminggoods:java_hyper_stone"
+          "Name": "programminggoods:java_hyper_stone",
+          "Properties": {}
         }
       },
       {
@@ -19,7 +20,8 @@
           "tag": "minecraft:deepslate_ore_replaceables"
         },
         "state": {
-          "Name": "programminggoods:java_hyper_stone"
+          "Name": "programminggoods:java_hyper_stone",
+          "Properties": {}
         }
       }
     ]

@@ -28,6 +28,8 @@ public class ModConfiguredFeatures {
     public static void bootstrap(
             BootstapContext<ConfiguredFeature<?, ?>> context) {
 
+        // ---------------- JAVA OBJECT ORE ----------------
+
         List<OreConfiguration.TargetBlockState>
                 overworldJavaOres = List.of(
 

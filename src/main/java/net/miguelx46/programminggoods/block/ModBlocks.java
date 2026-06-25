@@ -59,9 +59,10 @@ public class ModBlocks {
                     "java_hyper_stone",
                     () -> new JavaHyperStoneBlock(
                             BlockBehaviour.Properties
-                                    .copy(Blocks.NETHERITE_BLOCK)
+                                    .copy(Blocks.DIAMOND_ORE)
                                     .strength(1.0F, 1200.0F)
                                     .requiresCorrectToolForDrops()
+                                    .lightLevel(state -> 3)
                     )
             );
 

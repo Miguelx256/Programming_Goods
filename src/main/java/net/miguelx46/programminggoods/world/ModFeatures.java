@@ -1,7 +1,6 @@
 package net.miguelx46.programminggoods.world;
 
 import net.miguelx46.programminggoods.ProgrammingGoods;
-import net.miguelx46.programminggoods.world.feature.JavaHyperStoneFeature;
 import net.miguelx46.programminggoods.world.feature.JavaLabFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
@@ -22,15 +21,6 @@ public class ModFeatures {
             FEATURES.register(
                     "java_lab",
                     () -> new JavaLabFeature(
-                            NoneFeatureConfiguration.CODEC
-                    )
-            );
-
-    public static final RegistryObject<Feature<NoneFeatureConfiguration>>
-            JAVA_HYPER_STONE =
-            FEATURES.register(
-                    "java_hyper_stone",
-                    () -> new JavaHyperStoneFeature(
                             NoneFeatureConfiguration.CODEC
                     )
             );

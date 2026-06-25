@@ -25,6 +25,8 @@ public class ModPlacedFeatures {
     public static void bootstrap(
             BootstapContext<PlacedFeature> context) {
 
+        // ================= JAVA OBJECT ORE =================
+
         Holder<ConfiguredFeature<?, ?>> javaOre =
                 context.lookup(Registries.CONFIGURED_FEATURE)
                         .getOrThrow(
@@ -41,11 +43,13 @@ public class ModPlacedFeatures {
 
                                 HeightRangePlacement.uniform(
                                         VerticalAnchor.absolute(-60),
-                                        VerticalAnchor.absolute(-40)
+                                        VerticalAnchor.absolute(-30)
                                 )
                         )
                 )
         );
+
+        // ================= JAVA HYPER STONE =================
 
         Holder<ConfiguredFeature<?, ?>> javaHyperStone =
                 context.lookup(Registries.CONFIGURED_FEATURE)
@@ -58,17 +62,21 @@ public class ModPlacedFeatures {
                 new PlacedFeature(
                         javaHyperStone,
 
-                        commonOrePlacement(
-                                1,
+                        List.of(
+
+                                CountPlacement.of(100),
+
+                                InSquarePlacement.spread(),
 
                                 HeightRangePlacement.uniform(
                                         VerticalAnchor.absolute(-50),
                                         VerticalAnchor.absolute(-15)
-                                )
+                                ),
+
+                                BiomeFilter.biome()
                         )
                 )
         );
-
     }
 
     public static ResourceKey<PlacedFeature>

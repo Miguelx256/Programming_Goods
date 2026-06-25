@@ -4,8 +4,10 @@ import net.miguelx46.programminggoods.ProgrammingGoods;
 import net.miguelx46.programminggoods.entity.custom.JavaGolemEntity;
 import net.miguelx46.programminggoods.item.ModItems;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -113,5 +115,32 @@ public class JavaHyperStoneBlock extends Block {
         }
 
         super.playerWillDestroy(level, pos, state, player);
+    }
+
+    @Override
+    public void animateTick(
+            BlockState state,
+            Level level,
+            BlockPos pos,
+            RandomSource random) {
+
+        super.animateTick(state, level, pos, random);
+
+        if (random.nextInt(6) != 0)
+            return;
+
+        double x = pos.getX() + 0.2 + random.nextDouble() * 0.6;
+        double y = pos.getY() + 0.2 + random.nextDouble() * 0.6;
+        double z = pos.getZ() + 0.2 + random.nextDouble() * 0.6;
+
+        level.addParticle(
+                ParticleTypes.ENCHANT,
+                x,
+                y,
+                z,
+                0.0,
+                0.02,
+                0.0
+        );
     }
 }

@@ -63,8 +63,6 @@ public class ProgrammingGoods {
                 new VillageJavaGolemSpawner()
         );
 
-
-
         modEventBus.addListener(this::addCreative);
     }
 

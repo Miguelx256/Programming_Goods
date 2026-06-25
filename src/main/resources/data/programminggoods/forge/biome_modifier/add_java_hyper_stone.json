@@ -1,0 +1,8 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "programminggoods:java_hyper_stone_placed"
+  ],
+  "step": "underground_ores"
+}
