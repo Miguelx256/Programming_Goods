@@ -27,6 +27,8 @@
   "item.programminggoods.java_stack": "Java Stack",
   "item.programminggoods.java_binarytree": "Java BinaryTree",
   "item.programminggoods.java_rotten_flesh": "Java Rotten Flesh",
+  "item.programminggoods.java_bone": "Java Bone",
+  "item.programminggoods.java_gunpowder": "Java Gunpowder",
 
   "block.programminggoods.java_compiler_table": "Java Compiler Table",
 
@@ -43,7 +45,8 @@
   "entity.programminggoods.java_zombie": "Java Zombie",
 
   "block.programminggoods.java_hyper_stone": "Java Hyper Stone",
-  "block.programminggoods.java_deepslate": "Java Deepslate"
+  "block.programminggoods.java_deepslate": "Java Deepslate",
+  "block.programminggoods.java_tnt": "Java Tnt"
 
 
 }

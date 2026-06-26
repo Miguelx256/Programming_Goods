@@ -64,8 +64,8 @@ public class ModItems {
             ITEMS.register("java_golem_spawn_egg",
                     () -> new ForgeSpawnEggItem(
                             ModEntities.JAVA_GOLEM,
-                            0x8B5A2B,
-                            0xFF8C00,
+                            0xFFFFFF,
+                            0xFFFFFF,
                             new Item.Properties()));
 
     public static final RegistryObject<Item> JAVA_ROTTEN_FLESH = ITEMS.register("java_rotten_flesh", () -> new Item(new Item.Properties().food(ModFoods.JAVA_ROTTEN_FLESH).stacksTo(64)));
@@ -74,8 +74,8 @@ public class ModItems {
             ITEMS.register("java_zombie_spawn_egg",
                     () -> new ForgeSpawnEggItem(
                             ModEntities.JAVA_ZOMBIE,
-                            0x8B5A2B,
-                            0xFF8C00,
+                            0xFFFFFF,
+                            0xFFFFFF,
                             new Item.Properties()));
 
     public static final RegistryObject<Item> JAVA_SKELETON_SPAWN_EGG =
@@ -84,8 +84,19 @@ public class ModItems {
 
                     () -> new ForgeSpawnEggItem(
                             ModEntities.JAVA_SKELETON,
-                            0xD8D8D8,
-                            0x222222,
+                            0xFFFFFF,
+                            0xFFFFFF,
+                            new Item.Properties()
+                    ));
+
+    public static final RegistryObject<Item> JAVA_CREEPER_SPAWN_EGG =
+            ITEMS.register(
+                    "java_creeper_spawn_egg",
+
+                    () -> new ForgeSpawnEggItem(
+                            ModEntities.JAVA_CREEPER,
+                            0xFFFFFF,
+                            0xFFFFFF,
                             new Item.Properties()
                     ));
 

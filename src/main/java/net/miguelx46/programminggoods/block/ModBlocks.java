@@ -4,6 +4,7 @@ import net.miguelx46.programminggoods.ProgrammingGoods;
 import net.miguelx46.programminggoods.block.custom.FuelBlock;
 import net.miguelx46.programminggoods.block.custom.JavaCompilerTableBlock;
 import net.miguelx46.programminggoods.block.custom.JavaHyperStoneBlock;
+import net.miguelx46.programminggoods.block.custom.JavaTntBlock;
 import net.miguelx46.programminggoods.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -72,6 +73,12 @@ public class ModBlocks {
                                     .lightLevel(state -> 3)
                     )
             );
+
+    public static final RegistryObject<Block> JAVA_TNT =
+            registerBlock("java_tnt",
+                    () -> new JavaTntBlock(
+                            BlockBehaviour.Properties.copy(Blocks.TNT)
+                    ));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

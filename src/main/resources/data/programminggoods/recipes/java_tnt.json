@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GTG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "item": "programminggoods:java_gunpowder"
+    },
+    "T": {
+      "item": "minecraft:tnt"
+    }
+  },
+  "result": {
+    "item": "programminggoods:java_tnt"
+  }
+}

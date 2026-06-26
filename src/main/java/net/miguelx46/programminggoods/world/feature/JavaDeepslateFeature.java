@@ -31,9 +31,9 @@ public class JavaDeepslateFeature extends Feature<NoneFeatureConfiguration> {
         BlockPos origin = context.origin();
         RandomSource random = context.random();
 
-        int radiusX = 50 + random.nextInt(20);
+        int radiusX = 40 + random.nextInt(20);
         int radiusY = 25 + random.nextInt(10);
-        int radiusZ = 50 + random.nextInt(20);
+        int radiusZ = 40 + random.nextInt(20);
 
         for (int x = -radiusX; x <= radiusX; x++) {
 

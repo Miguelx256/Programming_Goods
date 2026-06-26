@@ -3,9 +3,7 @@ package net.miguelx46.programminggoods;
 import com.mojang.logging.LogUtils;
 import net.miguelx46.programminggoods.block.ModBlocks;
 import net.miguelx46.programminggoods.block.entity.ModBlockEntities;
-import net.miguelx46.programminggoods.client.renderer.JavaGolemRenderer;
-import net.miguelx46.programminggoods.client.renderer.JavaSkeletonRenderer;
-import net.miguelx46.programminggoods.client.renderer.JavaZombieRenderer;
+import net.miguelx46.programminggoods.client.renderer.*;
 import net.miguelx46.programminggoods.client.screen.JavaCompilerScreen;
 import net.miguelx46.programminggoods.command.ModCommands;
 import net.miguelx46.programminggoods.entity.ModEntities;
@@ -17,9 +15,11 @@ import net.miguelx46.programminggoods.item.ModItems;
 import net.miguelx46.programminggoods.menu.ModMenuTypes;
 import net.miguelx46.programminggoods.world.ModFeatures;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.entity.TntRenderer;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.monster.AbstractSkeleton;
+import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -136,6 +136,16 @@ public class ProgrammingGoods {
                             .add(Attributes.MOVEMENT_SPEED, 0.28D)
                             .build()
             );
+
+            event.put(
+                    ModEntities.JAVA_CREEPER.get(),
+
+                    Creeper.createAttributes()
+
+                            .add(Attributes.MAX_HEALTH, 32.0D)
+                            .add(Attributes.MOVEMENT_SPEED, 0.30D)
+                            .build()
+            );
         }
     }
 
@@ -173,6 +183,16 @@ public class ProgrammingGoods {
             event.registerEntityRenderer(
                     ModEntities.JAVA_SKELETON.get(),
                     JavaSkeletonRenderer::new
+            );
+
+            event.registerEntityRenderer(
+                    ModEntities.JAVA_CREEPER.get(),
+                    JavaCreeperRenderer::new
+            );
+
+            event.registerEntityRenderer(
+                    ModEntities.JAVA_PRIMED_TNT.get(),
+                    JavaPrimedTntRenderer::new
             );
         }
     }

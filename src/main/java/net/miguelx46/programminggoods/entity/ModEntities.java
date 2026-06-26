@@ -1,9 +1,7 @@
 package net.miguelx46.programminggoods.entity;
 
 import net.miguelx46.programminggoods.ProgrammingGoods;
-import net.miguelx46.programminggoods.entity.custom.JavaGolemEntity;
-import net.miguelx46.programminggoods.entity.custom.JavaSkeletonEntity;
-import net.miguelx46.programminggoods.entity.custom.JavaZombieEntity;
+import net.miguelx46.programminggoods.entity.custom.*;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -61,6 +59,37 @@ public class ModEntities {
                             )
                             .sized(0.6F, 1.99F)
                             .build("java_skeleton"));
+
+    public static final RegistryObject<EntityType<JavaCreeperEntity>>
+            JAVA_CREEPER =
+
+            ENTITIES.register(
+                    "java_creeper",
+
+                    () -> EntityType.Builder
+                            .of(
+                                    JavaCreeperEntity::new,
+                                    MobCategory.MONSTER
+                            )
+                            .sized(0.6F, 1.7F)
+                            .build("java_creeper"));
+
+    public static final RegistryObject<EntityType<JavaPrimedTnt>>
+            JAVA_PRIMED_TNT =
+
+            ENTITIES.register(
+                    "java_primed_tnt",
+
+                    () -> EntityType.Builder
+                            .<JavaPrimedTnt>of(
+                                    JavaPrimedTnt::new,
+                                    MobCategory.MISC
+                            )
+                            .sized(0.98F, 0.98F)
+                            .clientTrackingRange(10)
+                            .updateInterval(10)
+                            .build("java_primed_tnt")
+            );
 
     public static void register(IEventBus eventBus) {
         ENTITIES.register(eventBus);
