@@ -91,6 +91,20 @@ public class ModEntities {
                             .build("java_primed_tnt")
             );
 
+    public static final RegistryObject<EntityType<JavaSpiderEntity>>
+            JAVA_SPIDER =
+
+            ENTITIES.register(
+                    "java_spider",
+
+                    () -> EntityType.Builder
+                            .of(
+                                    JavaSpiderEntity::new,
+                                    MobCategory.MONSTER
+                            )
+                            .sized(1.4F, 0.9F)
+                            .build("java_spider"));
+
     public static void register(IEventBus eventBus) {
         ENTITIES.register(eventBus);
     }

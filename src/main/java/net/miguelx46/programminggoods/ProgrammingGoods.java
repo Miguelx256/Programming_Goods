@@ -7,21 +7,24 @@ import net.miguelx46.programminggoods.client.renderer.*;
 import net.miguelx46.programminggoods.client.screen.JavaCompilerScreen;
 import net.miguelx46.programminggoods.command.ModCommands;
 import net.miguelx46.programminggoods.entity.ModEntities;
-import net.miguelx46.programminggoods.entity.custom.JavaZombieEntity;
-import net.miguelx46.programminggoods.event.JavaLabReplacer;
 import net.miguelx46.programminggoods.event.VillageJavaGolemSpawner;
 import net.miguelx46.programminggoods.item.ModCreativeModTabs;
 import net.miguelx46.programminggoods.item.ModItems;
 import net.miguelx46.programminggoods.menu.ModMenuTypes;
 import net.miguelx46.programminggoods.world.ModFeatures;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.renderer.entity.TntRenderer;
+import net.minecraft.client.renderer.entity.SpiderRenderer;
+import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.monster.AbstractSkeleton;
 import net.minecraft.world.entity.monster.Creeper;
+import net.minecraft.world.entity.monster.Spider;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -146,6 +149,11 @@ public class ProgrammingGoods {
                             .add(Attributes.MOVEMENT_SPEED, 0.30D)
                             .build()
             );
+
+            event.put(
+                    ModEntities.JAVA_SPIDER.get(),
+                    Spider.createAttributes().build()
+            );
         }
     }
 
@@ -163,7 +171,36 @@ public class ProgrammingGoods {
                 MenuScreens.register(
                         ModMenuTypes.JAVA_COMPILER_MENU.get(),
                         JavaCompilerScreen::new);
+
+                ItemProperties.register(
+                        ModItems.JAVA_BOW.get(),
+                        new ResourceLocation("pull"),
+                        (ItemStack stack, net.minecraft.client.multiplayer.ClientLevel level,
+                         LivingEntity entity, int seed) -> {
+
+                            if (entity == null) {
+                                return 0.0F;
+                            }
+
+                            return entity.getUseItem() != stack
+                                    ? 0.0F
+                                    : (float)(stack.getUseDuration() - entity.getUseItemRemainingTicks()) / 20.0F;
+                        });
+
+                ItemProperties.register(
+                        ModItems.JAVA_BOW.get(),
+                        new ResourceLocation("pulling"),
+                        (ItemStack stack, net.minecraft.client.multiplayer.ClientLevel level,
+                         LivingEntity entity, int seed) -> {
+
+                            return entity != null
+                                    && entity.isUsingItem()
+                                    && entity.getUseItem() == stack
+                                    ? 1.0F
+                                    : 0.0F;
+                        });
             });
+
         }
 
         @SubscribeEvent
@@ -193,6 +230,11 @@ public class ProgrammingGoods {
             event.registerEntityRenderer(
                     ModEntities.JAVA_PRIMED_TNT.get(),
                     JavaPrimedTntRenderer::new
+            );
+
+            event.registerEntityRenderer(
+                    ModEntities.JAVA_SPIDER.get(),
+                    JavaSpiderRenderer::new
             );
         }
     }

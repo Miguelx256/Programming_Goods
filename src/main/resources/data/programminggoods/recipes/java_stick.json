@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " O ",
+    "OSO",
+    " O "
+  ],
+  "key": {
+    "O": {
+      "item": "programminggoods:java_object"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "programminggoods:java_stick"
+  }
+}

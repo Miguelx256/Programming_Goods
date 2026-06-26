@@ -3,6 +3,7 @@ package net.miguelx46.programminggoods.item;
 import net.miguelx46.programminggoods.ProgrammingGoods;
 import net.miguelx46.programminggoods.block.custom.FuelItem;
 import net.miguelx46.programminggoods.entity.ModEntities;
+import net.miguelx46.programminggoods.item.custom.JavaBowItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -107,6 +108,33 @@ public class ModItems {
     public static final RegistryObject<Item> JAVA_GUNPOWDER =
             ITEMS.register("java_gunpowder",
                     () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> JAVA_STICK =
+            ITEMS.register("java_stick",
+                    () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> JAVA_STRING =
+            ITEMS.register("java_string",
+                    () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> JAVA_SPIDER_SPAWN_EGG =
+            ITEMS.register(
+                    "java_spider_spawn_egg",
+
+                    () -> new ForgeSpawnEggItem(
+                            ModEntities.JAVA_SPIDER,
+                            0xFFFFFF,
+                            0xFFFFFF,
+                            new Item.Properties()
+                    ));
+
+    public static final RegistryObject<Item> JAVA_BOW =
+            ITEMS.register(
+                    "java_bow",
+                    () -> new JavaBowItem(
+                            new Item.Properties()
+                                    .durability(820)
+                    ));
 
     // registrar los items dado un bus de eventos
     public static void register(IEventBus eventBus) {

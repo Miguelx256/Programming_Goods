@@ -42,6 +42,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.JAVA_ZOMBIE_SPAWN_EGG.get());
                         pOutput.accept(ModItems.JAVA_SKELETON_SPAWN_EGG.get());
                         pOutput.accept(ModItems.JAVA_CREEPER_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.JAVA_SPIDER_SPAWN_EGG.get());
 
                         pOutput.accept((ModItems.ARRAY_FUEL.get()));
                         pOutput.accept((ModBlocks.ARRAY_FUEL_BLOCK.get()));
@@ -51,6 +52,7 @@ public class ModCreativeModTabs {
                         pOutput.accept((ModItems.JAVA_AXE.get()));
                         pOutput.accept((ModItems.JAVA_SHOVEL.get()));
                         pOutput.accept((ModItems.JAVA_HOE.get()));
+                        pOutput.accept((ModItems.JAVA_BOW.get()));
 
                         pOutput.accept((ModItems.JAVA_NODE.get()));
                         pOutput.accept((ModItems.JAVA_ARRAYLIST.get()));
@@ -60,6 +62,8 @@ public class ModCreativeModTabs {
                         pOutput.accept((ModItems.JAVA_ROTTEN_FLESH.get()));
                         pOutput.accept(ModItems.JAVA_BONE.get());
                         pOutput.accept(ModItems.JAVA_GUNPOWDER.get());
+                        pOutput.accept(ModItems.JAVA_STICK.get());
+                        pOutput.accept(ModItems.JAVA_STRING.get());
 
                         pOutput.accept(ModBlocks.JAVA_COMPILER_TABLE.get());
 

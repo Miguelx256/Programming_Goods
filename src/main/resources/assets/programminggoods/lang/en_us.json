@@ -1,6 +1,5 @@
 {
   "creativetab.programminggoods_tab": "Programming Goods",
-
   "item.programminggoods.java_coffee": "Java Coffee",
   "item.programminggoods.java_juice": "Java Juice",
   "item.programminggoods.java_apple": "Java Apple",
@@ -15,12 +14,10 @@
   "item.programminggoods.java_axe": "Java Axe",
   "item.programminggoods.java_shovel": "Java Shovel",
   "item.programminggoods.java_hoe": "Java Hoe",
-
   "block.programminggoods.java_object_ore": "Java Object Ore",
   "block.programminggoods.java_coffee_block": "Java Coffee Block",
   "block.programminggoods.array_fuel_block": "Array Fuel Block",
   "block.programminggoods.code_furnace": "Code Furnace",
-
   "item.programminggoods.java_node": "Java Node",
   "item.programminggoods.java_arraylist": "Java ArrayList",
   "item.programminggoods.java_hashmap": "Java HashMap",
@@ -29,24 +26,21 @@
   "item.programminggoods.java_rotten_flesh": "Java Rotten Flesh",
   "item.programminggoods.java_bone": "Java Bone",
   "item.programminggoods.java_gunpowder": "Java Gunpowder",
-
   "block.programminggoods.java_compiler_table": "Java Compiler Table",
-
   "block.programminggoods.java_smooth_stone": "Java Smooth Stone",
   "block.programminggoods.java_stone": "Java Stone",
   "block.programminggoods.java_stone_bricks": "Java Stone Bricks",
-
   "item.programminggoods.java_golem_spawn_egg": "Java Golem Spawn Egg",
   "item.programminggoods.java_zombie_spawn_egg": "Java Zombie Spawn Egg",
   "item.programminggoods.java_skeleton_spawn_egg": "Java Skeleton Spawn Egg",
   "item.programminggoods.java_creeper_spawn_egg": "Java Creeper Spawn Egg",
-
   "entity.programminggoods.java_golem": "Java Golem",
   "entity.programminggoods.java_zombie": "Java Zombie",
-
   "block.programminggoods.java_hyper_stone": "Java Hyper Stone",
   "block.programminggoods.java_deepslate": "Java Deepslate",
-  "block.programminggoods.java_tnt": "Java Tnt"
-
-
+  "block.programminggoods.java_tnt": "Java Tnt",
+  "item.programminggoods.java_stick": "Java Stick",
+  "item.programminggoods.java_string": "Java String",
+  "item.programminggoods.java_spider_spawn_egg": "Java Spider Spawn Egg",
+  "item.programminggoods.java_bow": "Java Bow"
 }

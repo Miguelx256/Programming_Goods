@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " JS",
+    "J S",
+    " JS"
+  ],
+  "key": {
+    "J": {
+      "item": "programminggoods:java_stick"
+    },
+    "S": {
+      "item": "programminggoods:java_string"
+    }
+  },
+  "result": {
+    "item": "programminggoods:java_bow"
+  }
+}
