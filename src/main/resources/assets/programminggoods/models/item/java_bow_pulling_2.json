@@ -1,5 +1,5 @@
 {
-  "parent": "item/generated",
+  "parent": "item/bow",
   "textures": {
     "layer0": "programminggoods:item/java_bow_pulling_2"
   }
